@@ -28,9 +28,14 @@
    .collapse {
      width:100%;
    }
+   .carousel,.i {
+     height: 450px;
+    
+   }
 </style>
 </head>
-    <body>
+    <body background="#eee">
+      <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">shopiZ</a>
@@ -58,13 +63,13 @@
                 <a class="nav-link " aria-current="page" href="#">Orders</a>
               </li>
               <li class="nav-item mx-lg-4">
-                <a class="nav-link " aria-current="page" href="#"><i class="fa fa-shopping-cart "style="color:white"></i></a>
+                <a class="nav-link  " aria-current="page" href="#"><i class="fa fa-shopping-cart "></i></a>
               </li>
             </ul>
             <div class="row w-100">
             <form class="d-flex col-lg-10 col-md-12 col-sm-12 col-xm-12">
               <input class="form form-control me-0 "  type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success bg-success btn-light" type="submit"><i class="fa fa-search "style="color:white"></i></button>
+              <button class="btn btn-success bg-success btn-light" type="submit"><i class="fa fa-search "style="color:white"></i></button>
             </form>
           </div>
           
@@ -73,6 +78,28 @@
           </div>
         </div>
       </nav>
+      <!-- slides-->
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class=" carousel-item active">
+            <img src="https://qph.fs.quoracdn.net/main-qimg-e736d9311da0a67794a7e9f473127f56" class=" i d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-10/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone.jpg" class=" i d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://thumbs.dreamstime.com/b/supermarket-cart-loaded-cardboard-boxes-sales-goods-concept-trade-commerce-online-shopping-high-delivery-order-134531493.jpg" class=" i d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
      </body>
 </html>
