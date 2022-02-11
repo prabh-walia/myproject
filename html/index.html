@@ -76,7 +76,7 @@
                   <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalForm" href="#">login</a></li>
                   
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Sign up</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalFormS" href="#">Sign up</a></li>
                 </ul>
               </li>
               <li class="nav-item mx-lg-5">
@@ -173,7 +173,7 @@
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div>
                         <div class="modal-footer d-block">
-                            <p class="float-start">Not yet account <a href="#">Sign Up</a></p>
+                            <p class="float-start" data-bs-toggle="modal" data-bs-target="#modalFormS">Not yet account <a href="#">Sign Up</a></p>
                             <button type="submit" class="btn btn-warning float-end">Submit</button>
                         </div>
                     </form>
@@ -181,6 +181,50 @@
             </div>
         </div>
     </div>
+    <!--signup-->
+    <div class="modal fade" id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Register your account</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label class="form-label">Full Name</label>
+                          <input type="text" class="form-control" id="fullname" name="fullname" placeholder="full name" />
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="email" name="email" placeholder="email address" />
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label">State</label>
+                          <input type="text" class="form-control" id="state" name="state" placeholder="state" />
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label">city</label>
+                          <input type="text" class="form-control" id="text" name="text" placeholder="city" />
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label">Password</label>
+                          <input type="Password" class="form-control" id="pass" name="pass" placeholder="password" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label"> Confirm Password</label>
+                        <input type="Password" class="form-control" id="pass" name="pass" placeholder=" confirm password" />
+                    </div>
+                      
+                      <div class="modal-footer d-block">
+                          <p class="float-start" data-bs-toggle="modal" data-bs-target="#modalForm">Already have an account? <a href="#">login</a></p>
+                          <button type="submit" class="btn btn-warning float-end">Submit</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
 
