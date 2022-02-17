@@ -10,6 +10,13 @@
 <style>
    .navbar {
      background: rgb(2, 29, 54);
+     position: fixed;
+     position: fixed;
+left: 0;
+right: 0;
+
+
+z-index: 99999
     
    }
    .container-fluid > a {
@@ -80,6 +87,11 @@
    background: rgb(250, 248, 248);
    margin:2%;
 
+}
+.about {
+  display: flex;
+  justify-content: center;
+ align-items: start;
 }
 .box{
   margin:1%;
@@ -187,7 +199,7 @@
      </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade"style= "position:relative; top:2%;" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -218,7 +230,7 @@
         </div>
     </div>
     <!--signup-->
-    <div class="modal fade" id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" style= "position:relative; top:2%;"id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
@@ -305,9 +317,19 @@
         
         </div>
         
-    
+    <!--footer-->
+    <div class="footer" style="width: 100%;height: 200px;background: rgb(16, 17, 22);margin-top: 1%;">
+
+<div class="about text-light">
+  <ul style="list-style: none">
+    <li>Get to Know about</li>
+    <li>about</li>
+    <li>services</li>
+    <li><a href="sellerRegister.html">Sell on shopiZ</a></li>
+  </ul>
+</div>
     </div>
-    </div>
+  
    
 
 
