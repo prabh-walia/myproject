@@ -26,6 +26,24 @@
              background: rgb(73, 59, 105);
             
          }
+         .flexboxx {
+             justify-content: center;
+             align-items: center;
+         }
+         .cardd {
+             width: 330px;
+             height: 330px;
+             background: rgb(252, 251, 251);
+             margin: 2%;
+             border-radius: 50%;
+         }
+         .why {
+             height: 400px;
+             background:rgb(218, 234, 236);
+         }
+         .why>.text>h1 {
+             font-weight: bold;
+         }
          .button {
         margin-top: 5%;
         width: 240px;
@@ -37,19 +55,107 @@
       font-weight:bold;
          }
      </style>
-     <body>
+     <body style="background-color: rgb(218, 234, 236);">
  <div class="sellpage">
      <div class="selld text-center">
            <h1 class="text-center text-light"style="margin-top: 10%; font-size:50px;">
                Become a Seller on shopiZ
            </h1>
-       <button class="button text-dark" onclick="">
+       <button class="button text-dark"data-bs-toggle="modal" data-bs-target="#modalForm" onclick="">
                start selling
            </button>
      </div>
 <img src="https://m.media-amazon.com/images/G/31/selldot/hero/2SellingFees-HomePage-BannerImage._SL1280_FMpng_.png" alt="">
 
  </div>
+ <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login your Seller Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" />
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <div class="modal-footer d-block">
+                        <p class="float-start" data-bs-toggle="modal" data-bs-target="#modalFormS">Not yet account <a href="#">Sign Up</a></p>
+                        <button type="submit" class="btn btn-warning float-end">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register your Seller account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="full name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email address" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">mobile no.</label>
+                        <input type="phone" class="form-control" id="phone" name="phone" placeholder="mobile no." />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control" id="state" name="state" placeholder="state" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">city</label>
+                        <input type="text" class="form-control" id="text" name="text" placeholder="city" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="Password" class="form-control" id="pass" name="pass" placeholder="password" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label"> Confirm Password</label>
+                      <input type="Password" class="form-control" id="pass" name="pass" placeholder=" confirm password" />
+                  </div>
+                    
+                    <div class="modal-footer d-block">
+                        <p class="float-start" data-bs-toggle="modal" data-bs-target="#modalForm">Already have an account? <a href="#">login</a></p>
+                        <button type="submit" class="btn btn-warning float-end">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container why mt-5 px-4">
+    <div class="text text-center ">
+        <h1>Why sell on shopiZ?</h1>
+    </div>
+ <div class="container flexboxx mt-3" style="display: flex;">
+      <div class="cardd bg-success">1d</div>
+      <div class="cardd bg-primary">2</div>
+      <div class="cardd bg-secondary">3</div>
+ </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  </body>
 
