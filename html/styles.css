@@ -1,0 +1,206 @@
+.navbar {
+    background: rgb(2, 29, 54);
+    position: fixed;
+    position: fixed;
+left: 0;
+right: 0;
+
+
+z-index: 99999
+   
+  }
+  .container-fluid > a {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(192, 245, 210) !important;
+        font-size: x-large;
+      
+       
+  }
+  .form {
+    border-top-right-radius: 0% !important;
+    border-bottom-right-radius: 0% !important;
+  }
+  .btn {
+   border-top-left-radius: 0% !important;
+    border-bottom-left-radius: 0% !important;
+
+  }
+ 
+  .collapse {
+    width:100%;
+  }
+
+  .carousel,.i {
+    height: 450px;
+    position:sticky;
+  }
+  
+  .categorybx {
+    
+    margin:2%;
+    padding:1%;
+    display:flex !important;
+      height:350px !important;
+      justify-content: center;
+      
+ 
+
+  }
+  .mv {
+   position: relative;
+   top:4%;
+   left:2%;
+   font-weight: bold;
+   font-size: larger;
+   font-style:inherit;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    
+  }
+ 
+.items {
+  width: 96%;
+  height: 250px;
+  background: rgb(250, 248, 248);
+
+  margin:2%;
+}
+.mostview >.crousal {
+  width:97%;
+  height: 260px;
+  margin:2%;
+ border : 1px solid #ddd;
+}
+.mostview {
+ width: 96%;
+  height: 340px;
+  background: rgb(250, 248, 248);
+  margin:2%;
+
+}
+.about {
+ display: flex;
+ justify-content: center;
+align-items: start;
+}
+.box{
+ margin:1%;
+ box-shadow: 0 2px 6px rgb(158, 156, 156);
+}
+.sellpage{
+    width: 100%;
+    height: 400px;
+    background: rgb(94, 87, 197);
+    display: flex;
+    font-family: Poppins;
+}
+.sellpage>img {
+    width: 400px;
+    height: 350px;
+    
+}
+.selld {
+    width: 80%;
+    background: #000;
+    height: 400px;
+    background: rgb(94, 87, 197);
+   
+}
+.flexboxx {
+    justify-content: center;
+    align-items: center;
+}
+.cardd {
+    width: 300px;
+    height: 300px;
+    background: rgb(252, 251, 251);
+    margin: 2%;
+    border-radius: 5%;
+    line-height: 300px;
+    font-size: 30px;
+    box-shadow: 0 3px 6px rgb(185, 182, 182);
+    font-family: Poppins;
+}
+.why {
+    height: 400px;
+    font-family: Poppins;
+  
+}
+.why>.text>h1 {
+    font-weight: bold;
+}
+.button {
+margin-top: 5%;
+width: 240px;
+height: 80px;
+background-color: rgb(228, 174, 27) !important;
+border-radius: 20px;
+font-family: Poppins;
+font-size: 28px;
+font-weight:bold;
+}
+.filterbox {
+  position:absolute;
+  top: 125px;
+left: 20px;
+ width: 250px;
+ height: 602px;
+ background-color: #fff;
+ padding:5px;
+ padding-left:14px;
+
+ box-shadow: 0px 3px 6px #00000029;
+}
+.filter-heading{
+  font-size: 23px;
+  color:#192F60;
+  font-family: Poppins;
+
+}
+.Rectangle-2236 {
+  width: 208px;
+  height: 35px;
+  margin-top:6px;
+  font-family: Poppins;
+  border: 1px solid #8C96AB;
+border-radius: 3px;
+opacity: 1;
+padding:7px;
+color:#2c4579;
+font-size: 13px;
+}
+.Cuisine {
+  font-size: 15px;
+  color:#192F60;
+  font-family: Poppins;
+  margin-top:22px;
+}
+.check {
+  margin-top:9px;
+}
+.checkbox-items{
+  margin-left:6px;
+  color:#2c4579;
+font-size: 13px;
+font-family: Poppins;
+}
+
+.C_items {
+  width:1000px;
+  height: 680px;
+  background: #fff;
+ position: relative;
+ top:124px;
+ left:130px;
+ overflow-y: scroll;
+ box-shadow: 0px 3px 6px #00000029;
+}
+.C_heading {
+  height: 50px;
+  background: #fff;
+  font-size: 25px;
+  padding-top:10px;
+  padding-left: 35px;
+  color:#192F60;
+  font-family: Poppins;
+}
