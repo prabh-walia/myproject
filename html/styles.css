@@ -275,9 +275,19 @@ font-family: Poppins;
 }
 .relative_items{
   width: 96%;
-  height: 380px;
+  height: 460px;
   background: rgb(250, 248, 248);
   margin:2%;
   position:relative;
-  top:135px;
+  top:125px;
+}
+.relatives {
+  height: 390px;
+  overflow-x: auto;
+  display:flex;
+
+}
+.card {
+  flex-shrink: 0;
+  margin-left: 5px;
 }
