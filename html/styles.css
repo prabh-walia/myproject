@@ -275,19 +275,68 @@ font-family: Poppins;
 }
 .relative_items{
   width: 96%;
-  height: 460px;
-  background: rgb(250, 248, 248);
+  height: 470px;
+ 
   margin:2%;
   position:relative;
   top:125px;
+  border-bottom: 1px solid #ddd;
 }
 .relatives {
-  height: 370px;
+  height: 380px;
   overflow-x: auto;
   display:flex;
+  overflow-y: hidden;
 
 }
 .card {
   flex-shrink: 0;
   margin-left: 5px;
+}
+.review-part {
+  display:flex;
+margin-top: 50px;
+}
+.reviews {
+ 
+  width: 80%;
+  height: 600px;
+  overflow-y: scroll;
+  
+
+}
+.checkout_page {
+  height:820px;
+}
+.address{
+  height: 100px;
+  padding:10px;
+  box-shadow: 0px 3px 6px #00000029;
+
+  margin-top:30px;
+  font-family:Poppins;
+  
+}
+.checkout_detail{
+  height: 200px;
+  box-shadow: 0px 3px 6px #00000029;
+  
+}
+.detail_head{
+  font-size: 25px;
+  font-family: Poppins;
+
+}
+.actualprice {
+  position: relative;
+  left:80%;
+}
+.shipping-price {
+  position: relative;
+  left:83%;
+}
+.total-price {
+  position: relative;
+  left:78%;
+
 }
