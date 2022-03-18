@@ -208,6 +208,9 @@ font-family: Poppins;
   height: 225px;
   width: 90%;
 }
+.image_item_cart{
+  height: 150px;
+}
 .product_detail{
   
   position:relative;
