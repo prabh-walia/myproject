@@ -3,16 +3,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
-    Ecommerce
+  category
 </title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="styles.css">
+<script src="/js/p.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <script>
-  function openwindow(){
-    window.open("description_item.html","_self");
-  }
+   function myhref(web){
+      window.location.href = web;}
+
+function dd(i){
+ 
+    var s = document.getElementsByClassName("sss")[i].innerText;
+    var link = `/desc?name=${s}`;
+
+myhref(link);
+
+}
+
 </script>
 </head>
     <body style="background-color: rgb(255, 255, 255);">
@@ -31,13 +41,13 @@
               
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
+                  <%=session_name%>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalForm" href="#">login</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalForm" href="#"><%=current==='dashboard'? 'profile' : 'login'%></a></li>
                   
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalFormS" href="#">Sign up</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target= <%=current =='dashboard'? '#modalFormlogout':'#MODEL'  %> href="#"><%=current==='dashboard'? 'logout' : 'signup'%></a></li>
                 </ul>
               </li>
               <li class="nav-item mx-lg-5">
@@ -67,14 +77,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="/account" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
                             <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                            <input type="password" class="form-control" id="password" name="Login_password" placeholder="Password" />
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="rememberMe" />
@@ -98,7 +108,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                  <form>
+                  <form action="/getDetail" method="POST">
                       <div class="mb-3">
                           <label class="form-label">Full Name</label>
                           <input type="text" class="form-control" id="fullname" name="fullname" placeholder="full name" />
@@ -117,11 +127,11 @@
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Password</label>
-                          <input type="Password" class="form-control" id="pass" name="pass" placeholder="password" />
+                          <input type="Password" class="form-control" id="pass" name="assword" placeholder="password" />
                       </div>
                       <div class="mb-3">
                         <label class="form-label"> Confirm Password</label>
-                        <input type="Password" class="form-control" id="pass" name="pass" placeholder=" confirm password" />
+                        <input type="Password" class="form-control" id="pass" name="onfirmpassword" placeholder=" confirm password" />
                     </div>
                       
                       <div class="modal-footer d-block">
@@ -200,25 +210,26 @@
         </div>
         </div>
 
-
+      <!-- "myhref('dd()');-->
 
       </div>
       <div class=" container C_items">
         <div class="C_heading container-fluid">
-          Category
+       <%=cat%>
         </div>
-        <div class="C_iteM container mt-3">
-          <div class="card mb-3" onclick="openwindow()"style="max-width: 880px;height: 230px;cursor: pointer;box-shadow: 0 2px 5px rgb(218, 216, 216);border:none;">
+        <% for(var i =0;i<data.length;i++){%>
+        <div class="C_iteM container mt-3 ">
+          <div  class="card mb-3"onclick ="dd(<%=i%>)"style="max-width: 880px;height: 230px;cursor: pointer;box-shadow: 0 2px 5px rgb(218, 216, 216);border:none;">
             <div class="row g-0"style="height: 230px;">
               <div class="col-md-3 px-2">
-                <img src="https://images-eu.ssl-images-amazon.com/images/I/81p+EkIvUUL._AC._SR360,460.jpg" class="img-fluid rounded-start image_item" alt="...">
+                <img src="<%=data[i].image%>" class="img-fluid rounded-start image_item" alt="...">
               </div>
               <div class="col-md-9">
                 <div class="card-body" style="font-family: Poppins;">
-                  <h5 class="card-title"style="font-family: Poppins;font-size:26px;">Redmi 9A Sport</h5>
-                  <p class="card-text"style="font-family: Poppins;">Metallic Blue, 2GB RAM, 32GB Storage | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</p>
-                  <p class="card-text"><small class="text-muted">Brand - </small><small class="text-muted brandd">Redmi </small></p>
-                  <div class="price" style="font-family:Arial, Helvetica, sans-serif;font-size:25px;color: brown;">&#8377;6999</div>
+                  <h5 name ="prod"class="card-title  sss"style="font-family: Poppins;font-size:26px;"><%=data[i].title%></h5>
+                  <p class="card-text"style="font-family: Poppins;"><%=data[i].desc%> Metallic Blue, 2GB RAM, 32GB Storage | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</p>
+                  <p class="card-text"><small class="text-muted">Brand - </small><small class="text-muted brandd"><%=data[i].brand_name%> </small></p>
+                  <div class="price" style="font-family:Arial, Helvetica, sans-serif;font-size:25px;color: brown;">&#8377;<%=data[i].price%></div>
                 </div>
               
                
@@ -230,58 +241,29 @@
 
 
       </div>
-      <div class="C_iteM container mt-3">
-        <div class="card mb-3" style="max-width: 880px;height: 230px;cursor: pointer;box-shadow: 0 2px 5px rgb(218, 216, 216);border:none;">
-          <div class="row g-0"style="height: 230px;">
-            <div class="col-md-3 px-2">
-              <img src="https://images-eu.ssl-images-amazon.com/images/I/81p+EkIvUUL._AC._SR360,460.jpg" class="img-fluid rounded-start image_item" alt="...">
-            </div>
-            <div class="col-md-9">
-              <div class="card-body" style="font-family: Poppins;">
-                <h5 class="card-title"style="font-family: Poppins;font-size:26px;">Redmi 9A Sport</h5>
-                <p class="card-text"style="font-family: Poppins;">Metallic Blue, 2GB RAM, 32GB Storage | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</p>
-                <p class="card-text"><small class="text-muted">Brand - </small><small class="text-muted brandd">Redmi </small></p>
-                <div class="price" style="font-family:Arial, Helvetica, sans-serif;font-size:25px;color: brown;">&#8377;6999</div>
-              </div>
-            
-             
-            </div>
-          </div>
+      <%}%>
     
+    <div class="modal fade mt-4" id="modalFormlogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">you want to logout? </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form action="/logout" method="POST">
+                     
+                    
+                      
+                      <div class="modal-footer d-block">
+                
+                          <button type="submit" class="btn btn-warning float-end">Yes ,Logout</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
       </div>
-
-
-
-    </div>
-
-    <div class="C_iteM container mt-3">
-      <div class="card mb-3" style="max-width: 880px;height: 230px;cursor: pointer;box-shadow: 0 2px 5px rgb(218, 216, 216);border:none;">
-        <div class="row g-0"style="height: 230px;">
-          <div class="col-md-3 px-2">
-            <img src="https://images-eu.ssl-images-amazon.com/images/I/81p+EkIvUUL._AC._SR360,460.jpg" class="img-fluid rounded-start image_item" alt="...">
-          </div>
-          <div class="col-md-9">
-            <div class="card-body" style="font-family: Poppins;">
-              <h5 class="card-title"style="font-family: Poppins;font-size:26px;">Redmi 9A Sport</h5>
-              <p class="card-text"style="font-family: Poppins;">Metallic Blue, 2GB RAM, 32GB Storage | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</p>
-              <p class="card-text"><small class="text-muted">Brand - </small><small class="text-muted brandd">Redmi </small></p>
-              <div class="price" style="font-family:Arial, Helvetica, sans-serif;font-size:25px;color: brown;">&#8377;6999</div>
-            </div>
-          
-           
-          </div>
-        </div>
-  
-    </div>
-
-
-
   </div>
-     
-
-
-
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       </body>
       </html>

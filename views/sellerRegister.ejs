@@ -31,7 +31,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="/loginSeller" method="POST">
                     <div class="mb-3">
                         <label class="form-label">Email Address</label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
@@ -53,7 +53,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade w-100" id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -61,7 +61,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="/registerSeller" method="POST">
                     <div class="mb-3">
                         <label class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="fullname" name="fullname" placeholder="full name" />
@@ -80,15 +80,28 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">city</label>
-                        <input type="text" class="form-control" id="text" name="text" placeholder="city" />
+                        <input type="text" class="form-control" id="text" name="city" placeholder="city" />
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label">business-name</label>
+                        <input type="text" class="form-control" id="text" name="buss" placeholder="business-name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">GST</label>
+                        <input type="text" class="form-control" id="text" name="code" placeholder="GST number" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Pickup Location</label>
+                        <input type="text" class="form-control" id="text" name="pickup" placeholder="location" />
+                    </div>
+
                     <div class="mb-3">
                         <label class="form-label">Password</label>
                         <input type="Password" class="form-control" id="pass" name="pass" placeholder="password" />
                     </div>
                     <div class="mb-3">
                       <label class="form-label"> Confirm Password</label>
-                      <input type="Password" class="form-control" id="pass" name="pass" placeholder=" confirm password" />
+                      <input type="Password" class="form-control" id="pass" name="Cpass" placeholder=" confirm password" />
                   </div>
                     
                     <div class="modal-footer d-block">

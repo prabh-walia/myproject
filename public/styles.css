@@ -67,13 +67,13 @@ z-index: 99999
 }
 .mostview >.crousal {
   width:97%;
-  height: 260px;
+  height: 400px;
   margin:2%;
- border : 1px solid #ddd;
+
 }
 .mostview {
  width: 96%;
-  height: 340px;
+  height: 460px;
   background: rgb(250, 248, 248);
   margin:2%;
 
@@ -341,5 +341,108 @@ margin-top: 50px;
 .total-price {
   position: relative;
   left:78%;
+
+}
+.menu{
+  width: 270px;
+  height: 800px;
+ 
+  position:fixed;
+  margin-top: 69px;
+  border-right:1px solid #ddd ;
+
+}
+.profile_head {
+  width: 270px;
+  height: 200px;
+ 
+}
+.profile_pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  
+}
+ul >.options {
+  width: 270px;
+  height: 70px;
+ line-height: 70px;
+padding-left:20px;
+  display: block;
+  cursor: pointer;
+  
+}
+ul >.options:hover {
+  background: #eee;
+}
+
+.dashboard{
+  background:rgb(248, 247, 247);
+  width:1170px;
+  height: 770px;
+ position: relative;
+ left:271px;
+ top:60px;
+ overflow-x: hidden;
+}
+.products {
+  background:rgb(248, 247, 247);
+  width:1170px;
+  height: 770px;
+  position: relative;
+  left:271px;
+  top:60px;
+  overflow-x: hidden;
+
+}
+#addproduct {
+  background:rgb(248, 247, 247);
+  width:1170px;
+  height: 770px;
+  position: relative;
+  left:271px;
+  top:60px;
+  overflow-x: hidden;
+
+}
+.pd{
+  width:500px;
+  height:330px;
+  background: rgb(255, 254, 254);
+  margin-right:30px;
+  border:1px solid #eee;
+}
+.sd{
+  width:440px;
+  height:330px;
+  background: rgb(255, 255, 255);
+  border:1px solid #eee;
+}
+.wd {
+  width: 1000px;
+  height: 370px;
+  background: rgb(255, 255, 255);
+  position: relative;
+  top:50px;
+  border:1px solid #eee;
+  left:30px;
+
+}
+.product-content {
+   width:90%;
+   height :700px;
+   background: rgb(252, 251, 251);
+   margin-left: 5%;
+   margin-top:40px;
+   border: 1px solid #eee;
+}
+.formsection {
+  width:90%;
+  height :auto;
+  background: rgb(252, 251, 251);
+  margin-left: 5%;
+  margin-top:40px;
+  border: 1px solid #eee;
+  padding:25px;
 
 }

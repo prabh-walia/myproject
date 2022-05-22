@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+   Seller Dashboard
+</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<script>
+
+
+var p=1;
+ // function displaypage(){
+    
+  //  var product_page = document.getElementById("products");
+   // var dashboard = document.getElementById("dashboardd");
+   // var product_button = document.getElementById("product");
+  ///  var dashbutton = document.getElementById("dash");
+    // product_button.style.backgroundColor="#eee"
+     // dashbutton.style.backgroundColor="#fff"
+     //// dashbutton.style.borderRight="1px solid #ddd"
+     // dashboard.style.display="none";
+      //  product_page.style.display="block";
+    
+  //}
+// function  displaydash() {
+
+
+  //var product_page = document.getElementById("products");
+//var dashboard = document.getElementById("dashboardd");
+  //  var product_button = document.getElementById("product");
+    //var dashbutton = document.getElementById("dash");
+ //dashbutton.style.backgroundColor="#eee"
+     // product_button.style.backgroundColor="#fff"
+  
+     // product_button.style.borderRight="1px solid #ddd"
+      //product_page.style.display="none";
+      // dashboard.style.display="block";
+ //}
+
+
+
+var counter=1;
+function displaypage(n){
+
+   switch(n){
+     case 1:   var dashboard = document.getElementById("dashboardd");
+     var dashbutton = document.getElementById("dash");
+     dashbutton.style.backgroundColor="#eee";
+     dashboard.style.display="block";
+         switch(counter){
+           case 1: 
+           break;
+
+           case 2:     var product_page = document.getElementById("products"); 
+           var product_button = document.getElementById("product");
+           product_button.style.backgroundColor="#fff"
+           product_page.style.display="none";
+           product_button.style.backgroundColor="#fff"
+             
+      product_button.style.borderRight="1px solid #ddd";
+
+           break;
+
+           case 3:
+
+           break;
+           case 4:
+           break;
+           case 5:   var addproduct = document.getElementById("addproduct");
+           var Aproduct_button = document.getElementById("addP");
+           Aproduct_button.style.backgroundColor="#fff"
+          addproduct.style.display="none";
+                
+        
+           Aproduct_button.style.borderRight="1px solid #ddd";
+
+           break;
+         }
+         break;
+        case 2:       
+         var product_page = document.getElementById("products");
+        var product_button = document.getElementById("product");
+        product_page.style.display="block";
+        product_button.style.backgroundColor="#eee";
+            switch(counter){
+              case 1 :
+              var dashboard = document.getElementById("dashboardd");
+     var dashbutton = document.getElementById("dash");
+     product_button.style.backgroundColor="#eee"
+      dashbutton.style.backgroundColor="#fff"
+      dashbutton.style.borderRight="1px solid #ddd";
+      dashboard.style.display="none";
+
+              break;
+              case 2:
+              break;
+              case 3: 
+              break;
+              case 4:
+              break;
+              case 5:   var addproduct = document.getElementById("addproduct");
+           var Aproduct_button = document.getElementById("addP");
+           Aproduct_button.style.backgroundColor="#fff"
+          addproduct.style.display="none";
+                
+          var Aproduct_button = document.getElementById("addP");
+           Aproduct_button.style.borderRight="1px solid #ddd";
+
+           break;
+
+
+            }
+            break;
+       case 5: var addproduct = document.getElementById("addproduct");
+           var Aproduct_button = document.getElementById("addP");
+           Aproduct_button.style.backgroundColor="#eee"
+          addproduct.style.display="block";
+
+          switch(counter){
+            case 1 :   var dashboard = document.getElementById("dashboardd");
+     var dashbutton = document.getElementById("dash");
+
+      dashbutton.style.backgroundColor="#fff"
+      dashbutton.style.borderRight="1px solid #ddd";
+      dashboard.style.display="none";
+            break;
+            case 2 : var product_page = document.getElementById("products"); 
+           var product_button = document.getElementById("product");
+         
+           product_page.style.display="none";
+           product_button.style.backgroundColor="#fff"
+             
+      product_button.style.borderRight="1px solid #ddd";
+            break;
+            case 3 : 
+            break;
+            case 4: 
+            break;
+            case 5 : 
+            break;
+
+
+          }
+          break;
+
+   }
+   counter =n ;
+   console.log(counter);
+}
+  
+    function n(){
+       var select = document.getElementById("cat");
+ 
+      var value= select.selectedIndex;
+      console.log(value);
+
+     switch(value){
+       case 0:
+       var model = document.getElementById("model");
+              var size = document.getElementById("size");
+              model.style.display="block";
+              size.style.display="none";
+              var text = document.getElementById("m");
+              text.style.display="block";
+
+
+         break;
+         case 1: var model = document.getElementById("model");
+              var size = document.getElementById("size");
+              model.style.display="none";
+              var text = document.getElementById("m");
+              text.style.display="block";
+              var lan = document.getElementById("lan");
+              var color = document.getElementById("color");
+              color.style.display="block";
+              lan.style.display="none";
+
+              size.style.display="block";
+
+
+         break;
+         case 2: 
+         var model = document.getElementById("model");
+              var size = document.getElementById("size");
+              var lan = document.getElementById("lan");
+              var color = document.getElementById("color");
+              var text = document.getElementById("m");
+              color.style.display="none";
+              lan.style.display="block";
+              text.style.display="none";
+
+ 
+              model.style.display="none";
+              size.style.display="none";
+         break;
+     }
+      
+
+    }
+   
+     
+</script>
+<style>
+  .dashboard {
+    display:block;
+  }
+
+  .products{
+   display:none;
+  }
+  #lan {
+    display:none;
+  }
+  table {
+    width: 100%;
+  }
+  .heading {
+    height:50px;
+  }
+  tr {
+    height:100px;
+  
+  }
+  #addproduct {
+    display: none;
+  }
+  th{
+    background: #eee;
+  }
+tr>td,th{
+    border-bottom:1px solid rgb(209, 207, 207);
+    padding: 10px;
+  
+   
+  }
+  #size {
+    display:none;
+  }
+  .imagep {
+    width: 100px;
+  }
+</style>
+</head>
+    <body style="background-color: #fff;">
+
+        <nav class="navbar navbar-expand-lg navbar-dark"style="height: 67px;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" ;>shopiZ Seller</a>
+
+              <li class="nav-item dropdown "style="position:relative;bottom:10px;right:15px;">
+                <a class="nav-link dropdown-toggle" style="color: #ffffff;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalForm" href="#">Profile</a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalFormS" href="#">Logout</a></li>
+                </ul>
+              </li>
+               
+              </div>
+              
+              
+    
+          </nav>
+
+          <div class="menu">
+              <div class="profile_head">
+                  <div class="profilewrap"style="display:flex ; justify-content:center;" >
+              <div class="profile_pic mt-3">
+                 <img src="https://cswnn.edu.in/system/files/2021-02/avatar-png-1-original.png" alt=""style="width: 125px;
+                 height: 125px;
+                 border-radius: 62px;
+                 ">
+              </div>
+             
+                  </div>
+                  <div class="wrapname mt-3"style="display:flex ; justify-content:center;">
+                    <div class="seller_name ">
+                   <%=session_name%>
+                    </div>
+                  </div>
+                   
+              </div>
+
+              <div class="menus"style="width: 270px;height: 500px;">
+               <ul style="list-style: none;padding:0;" >
+                <li class="options" id="dash"style="background-color: #eee"onclick="displaypage(1)">Dashboard</li>
+                <li class="options" id="product" onclick="displaypage(2)">Products</li>
+                <li class="options" id="sales"onclick="displaypage(3)">Total sales</li>
+                <li class="options"id="Withdraw"onclick="displaypage(4)">Withdraw</li>
+                <li class="options"id="addP"onclick="displaypage(5)">Add new product</li>
+               </ul>
+              </div>
+
+          </div>
+          <div class="products"id="products">
+             <div class="product-content">
+                   <table>
+                     <tr class="heading">
+                       <th>
+                      
+                       </th>
+                       <th>
+                     product
+                       </th>
+                       <th>
+                       category
+                       </th>
+                       <th>
+                         views 
+                       </th>
+
+                     </tr>
+                   
+                    <%
+                    var n = data.length;
+                    console.log(n)
+                    
+                    for(var i =n-1;i>=0;i--){%>
+                     <tr>
+                    <td class="imagep"> <img src="<%=data[i].image%>"width="70"height="70"> </td>
+                         <td> <%=data[i].title%> 
+                          
+                         </td>
+                         <td> <%=data[i].category%></td>
+                         <td> <%=data[i].price%></td>
+                     </tr>
+                   <% }%>
+
+
+                   </table>
+             </div>
+
+
+
+          </div>
+            <div class="dashboard"id="dashboardd"> 
+           <div class="wrapd" style="display:flex;position:relative;top:30px;left:30px;">
+                <div class="pd">
+                              
+                </div>
+                <div class="sd">
+
+                </div>
+              </div>
+                <div class="wd">
+
+                </div>
+              
+
+            </div>
+            <div id="addproduct">
+              <div class="formsection">
+                ADD PRODUCT
+              <form action="/addproduct" method="POST"enctype="multipart/form-data">
+                <div class="mb-3 mt-2" >
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title of Product" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea  class="form-control"rows="5" id="DN" name="description" placeholder="Description" ></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Brand name</label>
+                    <input type="phone" class="form-control" id="brand" name="brand" placeholder="brand" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Select Category</label>
+                  <select class=" w-100 form-control  "id="cat" name="cat"onchange="n()" >
+          
+                 
+                    <option>Electronics</option>
+                    <option>clothes & Fashion</option>
+                    <option>books</option>
+                  
+                </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Available quantity</label>
+                    <input type="number" class="form-control" id="quantity" name="qty" placeholder="qty" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Price</label>
+                    <input type="number" class="form-control" id="text" name="buss" placeholder="price" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" id="color">color available(must use ',' to seperate color)</label>
+                    <label class="form-label" id="lan">Language(must use ',' to seperate languages)</label>
+
+                    <input type="text" class="form-control" id="text" name="color" placeholder="" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label "id="model">model available(must use ',' to seperate model) </label>
+                    <label class="form-label "id="size">Size available(must use ',' to seperate diff. sizes) </label>
+                    <input type="text" class="form-control" id="m" name="model" placeholder="" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label "id="model">Upload Image</label>
+                  <input type="file" name ="image">
+              </div>
+
+               
+                
+                <div class="modal-footer d-block">
+                  
+                    <button type="submit" class="btn btn-success w-100 ">Add</button>
+                </div>
+            </form>
+          </div>
+
+            </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
