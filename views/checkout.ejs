@@ -11,12 +11,30 @@
 <link rel="stylesheet" href="styles.css">
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <script>
-  function myhref(web){
-      window.location.href = web;}
+   function myhref(web){
+      window.location.href = web;
+    }
 
       function proceed(){
+           
+       var s = document.getElementsByClassName("card-title")[0].innerText;
+
+
+      var selectQ = document.getElementsByClassName("quant")[0];
+    var quantity = selectQ.options[selectQ.selectedIndex].text;
+   var selectp = document.getElementsByClassName("pay")[0];
+    var quantityp = selectp.options[selectQ.selectedIndex].text;
+
+ 
+        var link = `/proceed?name=${s}&qty=${quantity}&mode=${quantityp}`;
+      
          
+    
+   
+   myhref(link);
+   
       }
+
 </script>
 </head>
 <body>
@@ -39,11 +57,11 @@
                 <div class="col-md-9">
                   <div class="card-body" style="font-family: Poppins;">
                     <h5 class="card-title"style="font-family: Poppins;font-size:26px;"><%=data.title%></h5>
-                    <p class="card-text"style="font-family: Poppins;"><%=data.desc%>Metallic Blue, 2GB RAM, 32GB Storage | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</p>
+                    <div style="height:45px ;overflow-y: hidden;">  <p class="card-text"style="font-family: Poppins;"><%=data.desc%></p></div>
                     <p class="card-text"><small class="text-muted">Brand - </small><small class="text-muted brandd"><%=data.brand_name%> </small></p>
                     <div class="quantity" style="width:300px;height:50px;display: flex;line-height: 45px;margin-top:10px;">   <div class="Select-Location"style="">Quantity</div>
             <!-- quantity -->
-            <select class="Rectangle-2236" style="margin-left:12px;width: auto; ">
+            <select class="Rectangle-2236 quant" style="margin-left:12px;width: auto; ">
               <option ><%=qt%></option>
                 <option>1</option>
                 <option>2</option>
@@ -96,7 +114,7 @@
       
         <div class="payment w-75 container" style="height:30px;display: flex;line-height: 45px;margin-top:10px;">   <div class="Select-pay"style="">Payment </div>
 <!-- quantity -->
-<select class="Rectangle-2236 w-100"style="margin-left:12px;"   >
+<select class="pay Rectangle-2236 w-100"style="margin-left:12px;"   >
    
     <option>PAYTM</option>
     <option>UPI</option>

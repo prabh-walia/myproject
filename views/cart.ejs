@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css?version=1" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<script>
+       function myhref(web){
+      window.location.href = web;
+    }
+  function buy(i){
+    var name = document.getElementsByClassName("card-title")[i].innerText;
+    var selectQ = document.getElementsByClassName("quant")[i];
+    var quantity = selectQ.options[selectQ.selectedIndex].text;
+
+ 
+   
+
+    var link = `/checkout?name=${name}&q=${quantity}`;
+    console.log(i)
+
+    myhref(link);
+  }
+</script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">shopiZ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent" aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarcontent">
+            <ul class="navbar-nav me-5 ">
+              <li class="nav-item mx-lg-5">
+                <a class="nav-link active" aria-current="page" href="#">Home </a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%=session_name%>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalForm" href="#">Profile</a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalFormS" href="">Logout</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-lg-5">
+                <a class="nav-link " aria-current="page" href="#">Orders</a>
+              </li>
+              <li class="nav-item mx-lg-4">
+                <a class="nav-link  " aria-current="page" data-bs-toggle="modal" data-bs-target="#CartmodalForm" href=""><i class="fa fa-shopping-cart "></i></a>
+              </li>
+            </ul>
+            <div class="row w-100">
+            <form action="/get"method="GET" class="d-flex col-lg-10 col-md-12 col-sm-12 col-xm-12">
+              <input class="form form-control me-0 "  type="search" placeholder="Search" aria-label="Search"name="tag">
+              <button class="btn btn-success bg-success btn-light" type="submit"><i class="fa fa-search "style="color:white"></i></button>
+            </form>
+          </div>
+          
+          
+
+          </div>
+        </div>
+      </nav>
+
+         <div class="container">
+             <div class="orderhead "style="position:relative;top:90px;font-size:35px">Your Cart</div>
+             <div class="modal-body " style="overflow-y: scroll;height: 700px;margin-top: 120px;">
+          <%var j =0;%> <%for(var i = item.length-1;i>=0;i--){ %> 
+                <div class="C_iteM container mt-1">
+                  <div class="card mb-3" style="max-width: 100%;height: 200px;cursor: pointer;box-shadow: 0 2px 5px rgb(218, 216, 216);border:none;">
+                    <div class="row g-0"style="height:200px;">
+                      <div class="col-md-3 px-2 mt-4">
+                        <img src="<%=item[i].image%>" class="img-fluid rounded-start image_item_cart" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body" style="font-family: Poppins;">
+                          <h5 class="card-title"style="font-family: Poppins;font-size:26px;"><%=item[i].title%></h5>
+                          <div class="quantity" style="width:300px;height:50px;display: flex;line-height: 45px;margin-top:10px;">   <div class="Select-Location"style="">Quantity</div>
+                          <!-- quantity -->
+                          <select class="Rectangle-2236 quant" style="margin-left:6px;width: auto;">
+                           
+                             
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            
+                          </select>
+                          </div>
+                          <div class="wrap" style="display: flex;">
+                            <div class="price" style="font-family:Arial, Helvetica, sans-serif;font-size:25px;color: brown;">&#8377;<%=item[i].price %></div>
+                         <button type="button" class="btn btn-success   "onclick = "buy(<%=j%>)" style="position:relative;left:50%;">Checkout</button>
+                     <button type="button" class="btn btn-primary   "style="position:relative;left:55%;%">delete</button>
+                        </div>
+                        </div>
+                      
+                       
+                      </div>
+                    </div>
+              
+                </div>
+          
+          
+          
+              </div>
+            
+              <% j++; }%>
+             </div>
+         </div>
+       
+        </div>
+         <div class="modal fade mt-4" id="modalFormS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">you want to logout? </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/logout" method="POST">
+                           
+                          
+                            
+                            <div class="modal-footer d-block">
+                      
+                                <button type="submit" class="btn btn-warning float-end">Yes ,Logout</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -292,8 +292,8 @@ tr>td,th{
                <ul style="list-style: none;padding:0;" >
                 <li class="options" id="dash"style="background-color: #eee"onclick="displaypage(1)">Dashboard</li>
                 <li class="options" id="product" onclick="displaypage(2)">Products</li>
-                <li class="options" id="sales"onclick="displaypage(3)">Total sales</li>
-                <li class="options"id="Withdraw"onclick="displaypage(4)">Withdraw</li>
+          
+             
                 <li class="options"id="addP"onclick="displaypage(5)">Add new product</li>
                </ul>
               </div>
@@ -313,7 +313,7 @@ tr>td,th{
                        category
                        </th>
                        <th>
-                         views 
+                        price
                        </th>
 
                      </tr>
@@ -330,6 +330,7 @@ tr>td,th{
                          </td>
                          <td> <%=data[i].category%></td>
                          <td> <%=data[i].price%></td>
+                         <td> <form action="delete?name=<%=data[i].title%>&price=<%=data[i].price%>"method="POST"><button type="submit"id="but" class="btn btn-success">remove</button></form></td>
                      </tr>
                    <% }%>
 
@@ -342,15 +343,37 @@ tr>td,th{
           </div>
             <div class="dashboard"id="dashboardd"> 
            <div class="wrapd" style="display:flex;position:relative;top:30px;left:30px;">
-                <div class="pd">
-                              
+                <div class="pd"style="overflow-y:scroll">
+                  <div class="heado mt-2 mx-3"style="font-size:20px">Orders</div> 
+
+                  
+                  <div class="orderbody mt-4 ">
+                   <% for(var i = orders.length-1; i>=0;i--){%> 
+                   <div class="order container-fluid"style=" background:#eee;border:1px solid #dddd;height:50px;display:flex;align-items:center;">
+                    <div class="menuname w-50 text-center"style="">
+                      <%= orders[i].name%>
+                    </div>
+                    <div class="qty w-25 text-center"style="">
+                      qty- <%=orders[i].qty%>
+                  </div>
+                  <div class="price w-25 text-center"style="">
+                   
+                   &#8377; <%= orders[i].price%>
+                  </div>
+             
+             
+          </div>
+       <%}%>
+                   </div>
+                     
                 </div>
                 <div class="sd">
-
+                  <div class="heado mt-2 mx-3"style="font-size:20px;">Total orders count </div> 
+                        <div class="countr text-center"style="font-size:60px;margin-top:90px;"><%=orders.length%></div>
                 </div>
               </div>
                 <div class="wd">
-
+                  <div class="heado mt-2 mx-3"style="font-size:20px;">orders completed </div>
                 </div>
               
 

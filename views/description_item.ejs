@@ -29,6 +29,24 @@
 
     myhref(link);
   }
+  function cart(){
+    var name = document.getElementById("title-head").innerText;
+    var selectQ = document.getElementsByClassName("quant")[0];
+    var quantity = selectQ.options[selectQ.selectedIndex].text;
+
+    var selectQ = document.getElementsByClassName("color")[0];
+    var color = selectQ.options[selectQ.selectedIndex].text;
+    
+    var selectQ = document.getElementsByClassName("model")[0];
+    var model = selectQ.options[selectQ.selectedIndex].text;
+   alert("you want to add this item in your cart?")
+
+    var link = `/cart?name=${name}&q=${quantity}&c=${color}&m=${model}`;
+    console.log(link)
+
+    myhref(link);
+     
+  }
 </script>
 </head>
     <body style="background-color: rgb(255, 255, 255);">
@@ -47,7 +65,7 @@
               
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
+                  <%=session_name%>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalForm" href="#">login</a></li>
@@ -106,15 +124,15 @@
               <div class="delivery-h" style="display: flex;color:#192F60;margin-top:14px;font-size:16px;font-weight: 800;"> FREE Delivery:
 
                 <div class="delivery_time"style="color:#000;margin-left:10px;font-family:Poppins;font-weight:400">
-                  11 march to 15 march
+             
                 </div>
               </div>
 
             <div class="delivery-time"style="color:#2c4579;margin-top:14px;font-size:22px;font-weight: 500;font-family:Poppins"> Usually dispatched in <span> 5 </span> days</div>
 
-        <div class="quantity" style="width:200px;height:50px;display: flex;line-height: 45px;margin-top:10px;">   <div class="Select-Location"style="">Select quantity</div>
+        <div class="quantity " style="width:200px;height:50px;display: flex;line-height: 45px;margin-top:10px;">   <div class="Select-Location"style="">Select quantity</div>
             <!-- quantity -->
-            <select class="Rectangle-2236 quant" style="margin-left:12px;width: auto;">
+            <select class=" w-25 Rectangle-2236 quant" style="margin-left:12px;width: auto;">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -122,7 +140,7 @@
             </select>
             </div>
             <button type="button"onclick="buyit()" class="btn btn-success w-100 mt-3">Buy now</button>
-            <button type="button" class="btn btn-warning w-100 mt-3">Add to Cart</button>
+            <button type="button"onclick="cart()"class="btn btn-warning w-100 mt-3">Add to Cart</button>
         </div>
         <div class="product_details pb-3">
           <div class="wrapq" style="display:flex;justify-content: center;">
@@ -157,12 +175,7 @@
           Item description
         </div>
          <div class="description mt-2">
-           <ul style="padding:3px;">
-             <li>Processor: MediaTek Helio G25 Octa-core; Up to 2.0GHz clock speed</li>
-             <li>Camera: 13 MP Rear camera with AI portrait| 5 MP front camera</li>
-             <li>Display: 16.58 centimeters (6.53-inch) HD+ display with 720x1600 pixels and 20:9 aspect ratio</li>
-             <li>Battery: 5000 mAH large battery with 10W wired charger in-box</li>
-           </ul>
+          <%=data.desc%>
          </div>
 
 
@@ -250,43 +263,7 @@
     
     </div>
 
-     <div class="review-part  container">
-        <div class="reviews px-3 pt-4">
-             <div class="review-h" style="font-size: 20px;font-weight: 600;">Top reviews</div>
-             <div class="card mt-5 pt-3" style="width: 55rem;">
-
-              <h6 class="card-title mx-3 text-secondary"><i class="fa fa-user-circle  text-warning"style="font-size:24px;margin-right: 2px;" aria-hidden="true"></i>  Prabh :</h6>
-              <div class="card-body">
-                <h5 class="card-title "style="font-family:Poppins">good mobile </h5>
-              
-                <div class="rate text-warning mt-0 mb-2"style="font-size:15px">rating : <span> 4.0</span></div>
-                <p class="card-text">Both 13 MP and 5MP Camera quality is good. Have lot of pre installed apps. But can be uninstalled if not required. Overall good performance . I am using Asus zenfone max and according to me far better than Asus except Camera quality. It comes in 5000 mah battery and one can't get a better option at this price range. Go for it. It's really good
-                  .</p>
-         
-              </div>
-            </div>
-
-
-            <div class="card mt-5 pt-3" style="width: 55rem;">
-
-              <h6 class="card-title mx-3 text-secondary"><i class="fa fa-user-circle  text-warning"style="font-size:24px;margin-right: 2px;" aria-hidden="true"></i>  Prabh :</h6>
-              <div class="card-body">
-                <h5 class="card-title "style="font-family:Poppins">good mobile </h5>
-              
-                <div class="rate text-warning mt-0 mb-2"style="font-size:15px">rating : <span> 4.0</span></div>
-                <p class="card-text">Both 13 MP and 5MP Camera quality is good. Have lot of pre installed apps. But can be uninstalled if not required. Overall good performance . I am using Asus zenfone max and according to me far better than Asus except Camera quality. It comes in 5000 mah battery and one can't get a better option at this price range. Go for it. It's really good
-                  .</p>
-         
-              </div>
-            </div>
-          
-
-
-        </div>
-
-   
-
-     </div>
+     
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       </body>
