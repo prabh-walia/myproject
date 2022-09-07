@@ -146,67 +146,7 @@ myhref(link);
 
       <div class=" container-fluid page">
         <div class="filterbox">
-            <div class="small">
-                <div class="filter-options" style="padding:8px;">
-                    <div class="filter-heading">Filters</div>
-                  
-                    <!-- Cuisine Checkboxes -->
-                    <div class="Cuisine">types</div>
-                    <div class="check">
-                        <input type="checkbox" />
-                        <span class="checkbox-items">North Indian</span>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" />
-                        <span class="checkbox-items">South Indian</span>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" />
-                        <span class="checkbox-items">Chineese</span>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" />
-                        <span class="checkbox-items">Fast Food</span>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" />
-                        <span class="checkbox-items">Street Food</span>
-                    </div>
-                    <!-- Cost for Two radio button options -->
-                    <div class="Cuisine">Cost For Two</div>
-                    <div class="check">
-                        <input type="radio" />
-                        <span class="checkbox-items">Less than &#8377; 500</span>
-                    </div>
-                    <div class="check">
-                        <input type="radio" />
-                        <span class="checkbox-items">&#8377; 500 to &#8377; 1000</span>
-                    </div>
-                    <div class="check">
-                        <input type="radio" />
-                        <span class="checkbox-items">&#8377; 1000 to &#8377; 1500</span>
-                    </div class="check">
-                    <div>
-                        <input type="radio" />
-                        <span class="checkbox-items">&#8377; 1500 to &#8377; 2000</span>
-                    </div>
-                    <div class="check">
-                        <input type="radio" />
-                        <span class="checkbox-items">&#8377; 2000 +</span>
-                    </div>
-                    <!-- Sort radio button options -->
-                    <div class="Cuisine">Sort</div>
-                    <div class="check">
-                        <input type="radio" />
-                        <span class="checkbox-items">Price low to high</span>
-                    </div>
-                    <div class="check">
-                        <input type="radio" />
-                        <span class="checkbox-items">Price high to low</span>
-                    </div>
-                </div>
-            </div>
-
+           
         </div>
         </div>
 
@@ -227,7 +167,7 @@ myhref(link);
               <div class="col-md-9">
                 <div class="card-body" style="font-family: Poppins;">
                   <h5 name ="prod"class="card-title  sss"style="font-family: Poppins;font-size:26px;"><%=data[i].title%></h5>
-                  <p class="card-text"style="font-family: Poppins;"><%=data[i].desc%> Metallic Blue, 2GB RAM, 32GB Storage | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery</p>
+                 <div style="height:70px ;overflow-y: hidden;";> <p class="card-text"style="font-family: Poppins;"><%=data[i].desc%> </p></div>
                   <p class="card-text"><small class="text-muted">Brand - </small><small class="text-muted brandd"><%=data[i].brand_name%> </small></p>
                   <div class="price" style="font-family:Arial, Helvetica, sans-serif;font-size:25px;color: brown;">&#8377;<%=data[i].price%></div>
                 </div>
